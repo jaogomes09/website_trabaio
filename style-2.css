@@ -1,0 +1,380 @@
+<<<<<<< HEAD
+/* Resetando algumas margens e paddings padrões */
+body, h1, h2, p, .navbar {
+  margin: 0;
+  padding: 0;
+}
+
+/* Cor de fundo e fontes */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+}
+
+/* Customizando o título */
+h1, h2 {
+  color: #007BFF;
+}
+
+/* Imagem do carrossel ou banner */
+#home img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Cards */
+.card {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+=======
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Estilo do Cabeçalho e Menu de Navegação */
+/* Reduz a altura do cabeçalho */
+nav.navbar {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+/* Ajusta o tamanho da marca */
+.navbar-brand {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.2rem 0;
+}
+
+/* Reduz o tamanho dos links */
+.navbar-nav .nav-link {
+  font-size: 0.95rem;
+  padding: 0.3rem 0.6rem;
+}
+
+/* Remove margens extras do container */
+.container {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+
+
+/* Carrossel */
+#carousel .carousel-inner img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: #ff6f61;
+>>>>>>> bc5bcfe5137567aa79d82c86c55adfaf7f7e0da7
+}
+
+/* Rodapé */
+footer {
+  background-color: #343a40;
+<<<<<<< HEAD
+  color: #fff;
+}
+
+footer p {
+  margin: 0;
+}
+
+=======
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  font-size: 1rem;
+  margin: 5px;
+}
+.lore {
+  text-align: left;
+}
+.titulo-principal {
+  font-family: 'Arial', sans-serif;   /* Tipo da fonte */
+  font-size: 36px;                    /* Tamanho do texto */
+  color: #ff6f61;                     /* Cor do título */
+  text-align: center;                /* Centraliza o texto */
+  margin-top: 40px;                  /* Espaço acima */
+  margin-bottom: 20px;               /* Espaço abaixo */
+  text-transform: uppercase;         /* Deixa o texto em caixa alta */
+  letter-spacing: 2px;               /* Espaçamento entre letras */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 300px;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.imagem-lado {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagem-lado img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.texto-lado {
+  flex: 1;
+  padding: 20px;
+  text-align: right;
+}
+
+.titulo {
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Imagem de fundo desfocada */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('images/aa.jfif'); /* imagem da Unsplash */
+      background-size: cover;
+      background-position: center;
+      filter: blur(8px);
+      z-index: -1;
+    }
+
+    /* Conteúdo visível */
+    .conteudo {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      font-family: Arial, sans-serif;
+    }
+   header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: linear-gradient(90deg, #6bbf59, #3c7a3c);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .logo {
+      font-size: 28px;
+      font-weight: 900;
+      color: #e3f6e3;
+      letter-spacing: 2px;
+      user-select: none;
+      cursor: default;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #d6f0d6;
+      font-weight: 600;
+      font-size: 17px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #e3f6e3;
+      color: #2f4f2f;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    /* Responsivo simples */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 12px;
+        width: 100%;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 15px;
+        display: inline-block;
+        padding: 10px 12px;
+        font-size: 16px;
+      }
+    }
+   #carouselExampleControls {
+  max-width: 800px;       /* largura máxima do carrossel */
+  margin: 0 auto;         /* centralizar horizontalmente */
+}
+
+#carouselExampleControls .carousel-item img {
+  width: 100%;            /* ocupar toda a largura do container */
+  height: 400px;          /* altura fixa (ajuste conforme quiser) */
+  object-fit: cover;      /* recortar para preencher sem distorcer */
+}
+
+@media (max-width: 576px) {
+  #carouselExampleControls .carousel-item img {
+    height: 250px;        /* altura menor para dispositivos móveis */
+  }
+}
+footer{
+margin-bottom: 0%;
+
+}
+/* Container principal */
+.container {
+  display: flex;
+  align-items: center;
+  gap: 40px;               /* espaço entre imagem e texto */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  flex-wrap: wrap;          /* para mobile fica em coluna */
+  box-sizing: border-box;
+}
+
+/* Lado da imagem */
+.imagem-lado {
+  flex: 1 1 400px;          /* cresce, encolhe, base 400px mínimo */
+  text-align: center;
+}
+.imagem-lado img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.imagem-lado img:hover {
+  transform: scale(1.03);
+}
+
+/* Lado do texto */
+.sec-lore {
+  padding: 60px 20px;
+}
+
+.container-lore {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.imagem-lado, .texto-lado {
+  background-color: #ffffff;   /* fundo branco para ambos os blocos */
+  padding: 20px;                /* espaçamento interno */
+  border-radius: 8px;           /* cantos levemente arredondados */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);  /* sombra suave para destaque */
+}
+
+.imagem-lado {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.imagem-lado img {
+  width: 100%;
+  max-width: 500px;     /* aumentei pra permitir imagem maior */
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.imagem-lado img:hover {
+  transform: scale(1.02);
+}
+
+.texto-lado {
+  flex: 2 1 400px;
+}
+
+.texto-lado .titulo {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+  color: #333333;
+}
+
+.texto-lado p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #555555;
+}
+
+@media (max-width: 768px) {
+  .container-lore {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .texto-lado .titulo {
+    font-size: 2rem;
+  }
+  .texto-lado p {
+    font-size: 1rem;
+  }
+  .imagem-lado img {
+    max-width: 100%;   /* para ocupar largura total em mobile */
+  }
+}
+.imagem-lado {
+  flex: 1 1 500px;          /* mínimo de 500px de largura antes de quebrar para coluna */
+  text-align: center;
+}
+
+.imagem-lado img {
+  width: 100%;              /* ocupar toda a largura disponível do bloco */
+  max-width: 600px;         /* permitir até 600px de largura da imagem */
+  height: auto;             /* manter proporção da imagem */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.imagem-lado img:hover {
+  transform: scale(1.05);   /* leve zoom no hover */
+}
+>>>>>>> bc5bcfe5137567aa79d82c86c55adfaf7f7e0da7
