@@ -25,6 +25,7 @@ body {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
 }
 
 /* Rodapé */
@@ -73,3 +74,8 @@ list-style: none;
 .card-title-rochoso {
   color: #035393;
 }
+
+.container {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os blocos */
+  }
