@@ -55,27 +55,85 @@ footer p {
     p {
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
-}
-.list-dieta{
-text-align: justify;
-list-style: none;
-}
-
-.list-group-item {
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bold;
-  list-style: none;
-}
-
-.card-title-rosa {
-  color: #dc4364;
-}
-
-.card-title-rochoso {
-  color: #035393;
-}
+    }
 
 .container {
     display: flex;
     gap: 20px; /* Espaçamento entre os blocos */
+  }
+
+  .slime-card {
+    width: 18rem;
+    background: #56b300;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .slime-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  }
+
+  .slime-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .slime-body {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .slime-title {
+    color: #0051ff;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    text-decoration: underline;
+  }
+
+  .slime-desc {
+    font-size: 0.9rem;
+    color: #000000;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+
+  .slime-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: center;
+  }
+
+  .info-item {
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 0.6rem;
+    width: 90%;
+    text-align: center;
+    transition: background 0.3s ease;
+  }
+
+  .info-item:hover {
+    background: #ffe6f2;
+  }
+
+  .info-item h4 {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 0.3rem;
+  }
+
+  .info-item p {
+    font-size: 0.9rem;
+    color: #ff0000;
+  }
+
+  .info-img {
+    height: 40px;
+    margin: 0.3rem 0;
   }

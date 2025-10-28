@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* Resetando algumas margens e paddings padrões */
 body, h1, h2, p, .navbar {
   margin: 0;
@@ -30,58 +29,6 @@ h1, h2 {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-=======
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Estilos gerais */
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
-}
-
-/* Estilo do Cabeçalho e Menu de Navegação */
-/* Reduz a altura do cabeçalho */
-nav.navbar {
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
-}
-
-/* Ajusta o tamanho da marca */
-.navbar-brand {
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 0.2rem 0;
-}
-
-/* Reduz o tamanho dos links */
-.navbar-nav .nav-link {
-  font-size: 0.95rem;
-  padding: 0.3rem 0.6rem;
-}
-
-/* Remove margens extras do container */
-.container {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-
-
-/* Carrossel */
-#carousel .carousel-inner img {
-  height: 500px;
-  object-fit: cover;
-}
-
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  background-color: #ff6f61;
->>>>>>> bc5bcfe5137567aa79d82c86c55adfaf7f7e0da7
 }
 
 /* Rodapé */
