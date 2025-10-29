@@ -1,6 +1,9 @@
-
 /* Resetando algumas margens e paddings padrões */
-body, h1, h2, p, .navbar {
+body,
+h1,
+h2,
+p,
+.navbar {
   margin: 0;
   padding: 0;
 }
@@ -25,7 +28,7 @@ body {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  
+
 }
 
 /* Rodapé */
@@ -38,102 +41,255 @@ footer p {
   margin: 0;
 }
 
-  body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('images/aa.jfif'); /* imagem da Unsplash */
-      background-size: cover;
-      background-position: center;
-      filter: blur(8px);
-      z-index: -1;
-    }
- 
-    p {
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    }
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/aa.jfif');
+  /* imagem da Unsplash */
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+p {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
 
 .container {
-    display: flex;
-    gap: 20px; /* Espaçamento entre os blocos */
+  display: flex;
+  gap: 20px;
+  /* Espaçamento entre os blocos */
+}
+
+.slime-card {
+  width: 18rem;
+  background: #56b300;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slime-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.slime-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.slime-body {
+  padding: 1rem;
+  text-align: center;
+}
+
+.slime-title {
+  color: #0051ff;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  text-decoration: underline;
+}
+
+.slime-desc {
+  font-size: 0.9rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.slime-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.info-item {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 0.6rem;
+  width: 90%;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.info-item:hover {
+  background: #ffe6f2;
+}
+
+.info-item h4 {
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 0.3rem;
+}
+
+.info-item p {
+  font-size: 0.9rem;
+  color: #ff0000;
+}
+
+.info-img {
+  height: 40px;
+  margin: 0.3rem 0;
+}
+
+.slime-header {
+  text-align: center;
+  color: #ff66b2;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-decoration: underline;
+}
+
+.btn-original {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff66b2;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 12px;
+  transition: background-color 0.3s;
+}
+
+/* Header estilizado */
+.slime-header {
+  display: block;
+  /* garante que o elemento ocupe toda a largura disponível */
+  margin: 2rem auto;
+  /* centraliza horizontalmente */
+  text-align: center;
+  /* centraliza o texto dentro do h1 */
+
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+
+  /* Gradiente animado no texto */
+  background: linear-gradient(45deg, #ff66b2, #ffb3e6, #ff3399, #ff99cc);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Sombra 3D leve */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 4px 4px 10px rgba(0, 0, 0, 0.3);
+
+  /* Flutuação */
+  display: inline-block;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  animation: float 3s ease-in-out infinite alternate, gradientShift 5s ease infinite;
+}
+
+/* Animação de gradiente */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
   }
 
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Animação de flutuação */
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotateX(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotateX(2deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotateX(0deg);
+  }
+}
+
+ .custom-navbar {
+    background: linear-gradient(135deg, #0a1f44, #142f57, #1f4068);
+    box-shadow: 0 4px 15px rgba(0, 0, 40, 0.5);
+    border-bottom: 2px solid rgba(100, 200, 255, 0.2);
+  }
+
+  /* Marca (título) */
+  .navbar-brand {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(0, 200, 255, 0.6);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+  }
+
+  .navbar-brand:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.9);
+  }
+
+  /* Links da direita */
+  .nav-link {
+    margin-left: 20px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #66d9ff !important;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+  }
+
+  /* Ícone do menu (modo mobile) */
+  .navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+  }
+
+  .navbar-toggler-icon {
+    filter: invert(1);
+  }
+
+  /* Contêiner geral dos cards */
+.slime-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centraliza horizontalmente */
+  gap: 2rem; /* Espaçamento entre os cards */
+  padding: 2rem;
+  max-width: 1300px;
+  margin: 0 auto; /* Centraliza a grade */
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .slime-card {
+    width: 20rem;
+  }
+}
+
+@media (max-width: 992px) {
   .slime-card {
     width: 18rem;
-    background: #56b300;
-    border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    overflow: hidden;
-    font-family: 'Poppins', sans-serif;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
+}
 
-  .slime-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-  }
-
-  .slime-img {
+@media (max-width: 768px) {
+  .slime-card {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
+    max-width: 20rem;
   }
-
-  .slime-body {
-    padding: 1rem;
-    text-align: center;
-  }
-
-  .slime-title {
-    color: #0051ff;
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
-    text-decoration: underline;
-  }
-
-  .slime-desc {
-    font-size: 0.9rem;
-    color: #000000;
-    margin-bottom: 1rem;
-    font-weight: bold;
-  }
-
-  .slime-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
-    align-items: center;
-  }
-
-  .info-item {
-    background: #f9f9f9;
-    border-radius: 12px;
-    padding: 0.6rem;
-    width: 90%;
-    text-align: center;
-    transition: background 0.3s ease;
-  }
-
-  .info-item:hover {
-    background: #ffe6f2;
-  }
-
-  .info-item h4 {
-    font-size: 1rem;
-    color: #000000;
-    margin-bottom: 0.3rem;
-  }
-
-  .info-item p {
-    font-size: 0.9rem;
-    color: #ff0000;
-  }
-
-  .info-img {
-    height: 40px;
-    margin: 0.3rem 0;
-  }
+}

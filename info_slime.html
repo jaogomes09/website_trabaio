@@ -1,35 +1,56 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Informações dos Slimes - Slime Rancher</title>
-  <!-- Link para o Bootstrap -->
+  <title>Slimepédia</title>
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <div class="container-fluid">
+    <!-- Título à esquerda -->
+    <a class="navbar-brand text-light fw-bold" href="#">🌌 Slime Rancher Info</a>
+
+    <!-- Botão para mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links à direita -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-light fw-semibold" href="index-2.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light fw-semibold" href="mapa.html">Mapa</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEJx3F4ggT7V9Fk9T2Yzfnv8BDMktpfn4GSA4AnMz9QmyyQeN5aGh80zwJp57" crossorigin="anonymous">
-  <!-- Link para o seu arquivo de estilo -->
+
+  <!-- Seu CSS externo -->
   <link href="style_info.css" rel="stylesheet">
-</head>
 
 <body>
 
-  <!-- Menu de Navegação -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Slime Rancher</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index-2.html">Home</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div class="container">
+  <h1 class="slime-header">Slimepédia</h1>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <a href="index-2.html" target="_blank" class="btn-original">
+        Home
+      </a>
+    </ul>
+  </div>
+
+
+ <div class="slime-container">
     <!-- Seção de Produtos -->
     <div class="slime-card">
       <img src="images/Slime_Rosa.webp" alt="Slime Rosa" class="slime-img">
@@ -37,7 +58,7 @@
       <div class="slime-body">
         <h2 class="slime-title"> Slime Rosa</h2>
         <p class="slime-desc">
-         Felizes, saltitantes e um pouco bobos — os Slimes Rosas são o coração do rancho!
+          Felizes, saltitantes e um pouco bobos — os Slimes Rosas são o coração do rancho!
         </p>
 
         <div class="slime-info">
@@ -125,19 +146,19 @@
           <div class="info-item">
             <h4>Dieta</h4>
             <img src="images/Meat_Category_SR2 (1).webp" alt="Dieta" class="info-img">
-            <p>Vegetais</p>
+            <p>Carnes</p>
           </div>
 
           <div class="info-item">
             <h4>Comida Favorita</h4>
             <img src="images/Stony_Hen_SR2_SP.webp" alt="Comida favorita" class="info-img">
-            <p>Beterraba-coração</p>
+            <p>Galinha Pedregosa</p>
           </div>
 
           <div class="info-item">
             <h4>Plort</h4>
             <img src="images/PlortTABBY.webp" alt="Plort Rosa" class="info-img">
-            <p>Plort Rosa</p>
+            <p>Plort Tigrado</p>
           </div>
 
           <div class="info-item">
@@ -153,6 +174,376 @@
       </div>
     </div>
 
+    <div class="slime-card">
+      <img src="images/Phosphor_Slime_SP.webp" alt="Slime Rosa" class="slime-img">
+
+      <div class="slime-body">
+        <h2 class="slime-title"> Slime Fosforefente</h2>
+        <p class="slime-desc">
+          Delicados e luminosos, esses slimes brilham no escuro… mas o sol é seu verdadeiro inimigo.
+        </p>
+
+        <div class="slime-info">
+          <div class="info-item">
+            <h4>Dieta</h4>
+            <img src="images/Fruit_Category_SR2.webp" alt="Dieta" class="info-img">
+            <p>Frutas</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Comida Favorita</h4>
+            <img src="images/Cuberry.webp" alt="Comida favorita" class="info-img">
+            <p>Cuborango</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Plort</h4>
+            <img src="images/PlortPHOSPHOR.webp" alt="Plort Rosa" class="info-img">
+            <p>Plort Fosforefente</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Tipo</h4>
+            <p>Dócil</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Valor do Plort</h4>
+            <p>💰 22 <img src="images/moeda.webp" alt="Moeda" height="20"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slime-card">
+      <img src="images/Honey_Slime_SP.webp" alt="Slime Rosa" class="slime-img">
+
+      <div class="slime-body">
+        <h2 class="slime-title"> Slime de Mel</h2>
+        <p class="slime-desc">
+          Doce como mel, mas um imã para confusão.
+        </p>
+
+        <div class="slime-info">
+          <div class="info-item">
+            <h4>Dieta</h4>
+            <img src="images/Fruit_Category_SR2.webp" alt="Dieta" class="info-img">
+            <p>Frutas</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Comida Favorita</h4>
+            <img src="images/Mint_Mango_SR2_SP.webp" alt="Comida favorita" class="info-img">
+            <p>Mentanga</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Plort</h4>
+            <img src="images/PlortHONEY.webp" alt="Plort Rosa" class="info-img">
+            <p>Plort Mel</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Tipo</h4>
+            <p>Dócil</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Valor do Plort</h4>
+            <p>💰 45 <img src="images/moeda.webp" alt="Moeda" height="20"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slime-card">
+      <img src="images/Boom_Slime_SP.webp" alt="Slime Rosa" class="slime-img">
+
+      <div class="slime-body">
+        <h2 class="slime-title"> Slime Cabum</h2>
+        <p class="slime-desc">
+          Eles não estão bravos. Eles só... explodem às vezes.
+        </p>
+
+        <div class="slime-info">
+          <div class="info-item">
+            <h4>Dieta</h4>
+            <img src="images/Meat_Category_SR2 (1).webp" alt="Dieta" class="info-img">
+            <p>Vegetais</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Comida Favorita</h4>
+            <img src="images/Stony_Hen_SR2_SP.webp" alt="Comida favorita" class="info-img">
+            <p>Galinha Briosa</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Plort</h4>
+            <img src="images/PlortBOOM.webp" alt="Plort Rosa" class="info-img">
+            <p>Plort Cabum</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Tipo</h4>
+            <p>Nocivo</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Valor do Plort</h4>
+            <p>💰 45 <img src="images/moeda.webp" alt="Moeda" height="20"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slime-card">
+      <img src="images/Puddle_Slime_SP.webp" alt="Slime Rosa" class="slime-img">
+
+      <div class="slime-body">
+        <h2 class="slime-title"> Slime Molhado</h2>
+        <p class="slime-desc">
+          Pacíficos, silenciosos e sempre um pouco molhados.
+        </p>
+
+        <div class="slime-info">
+          <div class="info-item">
+            <h4>Dieta</h4>
+            <img src="images/Water_SR2_SP.webp" alt="Dieta" class="info-img">
+            <p>Água</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Comida Favorita</h4>
+            <img src="images/nao.webp" alt="Comida favorita" class="info-img">
+            <p>Não possui</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Plort</h4>
+            <img src="images/PlortPUDDLE.webp" alt="Plort Rosa" class="info-img">
+            <p>Plort Molhado</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Tipo</h4>
+            <p>Dócil</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Valor do Plort</h4>
+            <p>💰 45 <img src="images/moeda.webp" alt="Moeda" height="20"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slime-card">
+      <img src="images/Hunter_Slime_SP.webp" alt="Slime Rosa" class="slime-img">
+
+      <div class="slime-body">
+        <h2 class="slime-title"> Slime Caçador</h2>
+        <p class="slime-desc">
+          Você pode não vê-lo... mas ele com certeza está te vendo.
+        </p>
+
+        <div class="slime-info">
+          <div class="info-item">
+            <h4>Dieta</h4>
+            <img src="images/Meat_Category_SR2.webp" alt="Dieta" class="info-img">
+            <p>Carnes</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Comida Favorita</h4>
+            <img src="images/Roostro_SR2_SP.webp" alt="Comida favorita" class="info-img">
+            <p>Galinho Brioso</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Plort</h4>
+            <img src="images/PlortHUNTER.webp" alt="Plort Rosa" class="info-img">
+            <p>Plort de Caçador</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Tipo</h4>
+            <p>Dócil</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Valor do Plort</h4>
+            <p>💰 60 <img src="images/moeda.webp" alt="Moeda" height="20"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slime-card">
+      <img src="images/Rad_Slime_SP.webp" alt="Slime Rosa" class="slime-img">
+
+      <div class="slime-body">
+        <h2 class="slime-title"> Slime Radioativo</h2>
+        <p class="slime-desc">
+          Brilhar é viver... mas talvez não por muito tempo.
+        </p>
+
+        <div class="slime-info">
+          <div class="info-item">
+            <h4>Dieta</h4>
+            <img src="images/Veggie_Category.webp" alt="Dieta" class="info-img">
+            <p>Vegetais</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Comida Favorita</h4>
+            <img src="images/Oca_Oca.webp" alt="Comida favorita" class="info-img">
+            <p>Oca Oca</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Plort</h4>
+            <img src="images/PlortRAD.webp" alt="Plort Rosa" class="info-img">
+            <p>Plort Radioativo</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Tipo</h4>
+            <p>Nocivo</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Valor do Plort</h4>
+            <p>💰 45 <img src="images/moeda.webp" alt="Moeda" height="20"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slime-card">
+      <img src="images/Crystal_Slime_SP.webp" alt="Slime Rosa" class="slime-img">
+
+      <div class="slime-body">
+        <h2 class="slime-title"> Slime Cristalino</h2>
+        <p class="slime-desc">
+          Brilhante, bonito e perigoso — como toda joia rara.
+        </p>
+
+        <div class="slime-info">
+          <div class="info-item">
+            <h4>Dieta</h4>
+            <img src="images/Veggie_Category.webp" alt="Dieta" class="info-img">
+            <p>Vegetais</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Comida Favorita</h4>
+            <img src="images/OddOnion_SR2_SP.webp" alt="Comida favorita" class="info-img">
+            <p>Cebola Estranha</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Plort</h4>
+            <img src="images/PlortRAD.webp" alt="Plort Rosa" class="info-img">
+            <p>Plort Cristalino</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Tipo</h4>
+            <p>Nocivo</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Valor do Plort</h4>
+            <p>💰 60 <img src="images/moeda.webp" alt="Moeda" height="20"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="slime-card">
+      <img src="images/Quantum_Slime_SP.webp" alt="Slime Rosa" class="slime-img">
+
+      <div class="slime-body">
+        <h2 class="slime-title"> Slime Quântico</h2>
+        <p class="slime-desc">
+          Se você acha que está vendo um, pode ser que já seja tarde demais — ele está em outro lugar.
+        </p>
+
+        <div class="slime-info">
+          <div class="info-item">
+            <h4>Dieta</h4>
+            <img src="images/Fruit_Category_SR2.webp" alt="Dieta" class="info-img">
+            <p>Frutas</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Comida Favorita</h4>
+            <img src="images/PhaseLemon_SP.webp" alt="Comida favorita" class="info-img">
+            <p>Limão de Fases</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Plort</h4>
+            <img src="images/PlortQUANTUM.webp" alt="Plort Rosa" class="info-img">
+            <p>Plort Quântico</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Tipo</h4>
+            <p>Dócil</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Valor do Plort</h4>
+            <p>💰 60 <img src="images/moeda.webp" alt="Moeda" height="20"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div class="slime-card">
+      <img src="images/Dervish_Slime_SP.webp" alt="Slime Rosa" class="slime-img">
+
+      <div class="slime-body">
+        <h2 class="slime-title"> Slime Torvelinho</h2>
+        <p class="slime-desc">
+         Eles não causam problemas de propósito… o problema é que girar é tudo o que sabem fazer!
+        </p>
+
+        <div class="slime-info">
+          <div class="info-item">
+            <h4>Dieta</h4>
+            <img src="images/Fruit_Category_SR2.webp" alt="Dieta" class="info-img">
+            <p>Frutas</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Comida Favorita</h4>
+            <img src="images/Prickle_Pear.webp" alt="Comida favorita" class="info-img">
+            <p>Pêra Espinhosa</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Plort</h4>
+            <img src="images/PlortDERVISH.webp" alt="Plort Rosa" class="info-img">
+            <p>Plort Torvelinho</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Tipo</h4>
+            <p>Dócil</p>
+          </div>
+
+          <div class="info-item">
+            <h4>Valor do Plort</h4>
+            <p>💰 75 <img src="images/moeda.webp" alt="Moeda" height="20"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
 
     <!-- Scripts do Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
