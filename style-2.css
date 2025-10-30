@@ -1,53 +1,66 @@
-/* Resetando algumas margens e paddings padrões */
-body, h1, h2, p, .navbar {
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-
-/* Cor de fundo e fontes */
+ 
+/* Estilos gerais */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f4f4f9;
+  background-color: #f8f9fa;
+  color: #333;
 }
-
-/* Customizando o título */
-h1, h2 {
-  color: #007BFF;
+ 
+/* Estilo do Cabeçalho e Menu de Navegação */
+/* Reduz a altura do cabeçalho */
+nav.navbar {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
 }
-
-/* Imagem do carrossel ou banner */
-#home img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ 
+/* Ajusta o tamanho da marca */
+.navbar-brand {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.2rem 0;
 }
-
-/* Cards */
-.card {
-  margin-bottom: 20px;
-  border-radius: 10px;
+ 
+/* Reduz o tamanho dos links */
+.navbar-nav .nav-link {
+  font-size: 0.95rem;
+  padding: 0.3rem 0.6rem;
+}
+ 
+/* Remove margens extras do container */
+.container {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+ 
+ 
+ 
+.carousel {
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
-
+ 
+.carousel img {
+  height: 450px;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+ 
+/* Efeito de zoom suave */
+.carousel-item.active img {
+  transform: scale(1.05);
+}
+ 
 /* Rodapé */
-footer {
-  background-color: #343a40;
-<<<<<<< HEAD
-  color: #fff;
-}
-
-footer p {
-  margin: 0;
-}
-
-=======
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-}
-
+ 
 footer p {
   font-size: 1rem;
   margin: 5px;
@@ -65,7 +78,7 @@ footer p {
   text-transform: uppercase;         /* Deixa o texto em caixa alta */
   letter-spacing: 2px;               /* Espaçamento entre letras */
 }
-
+ 
 .container {
   display: flex;
   align-items: center;
@@ -74,26 +87,26 @@ footer p {
   padding: 20px;
   background-color: #f0f0f0;
 }
-
+ 
 .imagem-lado {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+ 
 .imagem-lado img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
 }
-
+ 
 .texto-lado {
   flex: 1;
   padding: 20px;
   text-align: right;
 }
-
+ 
 .titulo {
   font-family: 'Arial', sans-serif;
   font-size: 24px;
@@ -105,7 +118,7 @@ footer p {
       padding: 0;
       box-sizing: border-box;
     }
-
+ 
     /* Imagem de fundo desfocada */
     body::before {
       content: "";
@@ -120,7 +133,7 @@ footer p {
       filter: blur(8px);
       z-index: -1;
     }
-
+ 
     /* Conteúdo visível */
     .conteudo {
       position: relative;
@@ -141,7 +154,7 @@ footer p {
       top: 0;
       z-index: 1000;
     }
-
+ 
     header .logo {
       font-size: 28px;
       font-weight: 900;
@@ -151,7 +164,7 @@ footer p {
       cursor: default;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     }
-
+ 
     nav a {
       margin-left: 30px;
       text-decoration: none;
@@ -162,25 +175,25 @@ footer p {
       border-radius: 6px;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
-
+ 
     nav a:hover {
       background-color: #e3f6e3;
       color: #2f4f2f;
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
-
+ 
     /* Responsivo simples */
     @media (max-width: 600px) {
       header {
         flex-direction: column;
         align-items: flex-start;
       }
-
+ 
       nav {
         margin-top: 12px;
         width: 100%;
       }
-
+ 
       nav a {
         margin-left: 0;
         margin-right: 15px;
@@ -189,26 +202,10 @@ footer p {
         font-size: 16px;
       }
     }
-   #carouselExampleControls {
-  max-width: 800px;       /* largura máxima do carrossel */
-  margin: 0 auto;         /* centralizar horizontalmente */
-}
-
-#carouselExampleControls .carousel-item img {
-  width: 100%;            /* ocupar toda a largura do container */
-  height: 400px;          /* altura fixa (ajuste conforme quiser) */
-  object-fit: cover;      /* recortar para preencher sem distorcer */
-}
-
-@media (max-width: 576px) {
-  #carouselExampleControls .carousel-item img {
-    height: 250px;        /* altura menor para dispositivos móveis */
-  }
-}
-footer{
-margin-bottom: 0%;
-
-}
+ 
+ 
+ 
+ 
 /* Container principal */
 .container {
   display: flex;
@@ -220,7 +217,7 @@ margin-bottom: 0%;
   flex-wrap: wrap;          /* para mobile fica em coluna */
   box-sizing: border-box;
 }
-
+ 
 /* Lado da imagem */
 .imagem-lado {
   flex: 1 1 400px;          /* cresce, encolhe, base 400px mínimo */
@@ -237,12 +234,12 @@ margin-bottom: 0%;
 .imagem-lado img:hover {
   transform: scale(1.03);
 }
-
+ 
 /* Lado do texto */
 .sec-lore {
   padding: 60px 20px;
 }
-
+ 
 .container-lore {
   max-width: 1200px;
   margin: 0 auto;
@@ -251,19 +248,19 @@ margin-bottom: 0%;
   gap: 40px;
   flex-wrap: wrap;
 }
-
+ 
 .imagem-lado, .texto-lado {
   background-color: #ffffff;   /* fundo branco para ambos os blocos */
   padding: 20px;                /* espaçamento interno */
   border-radius: 8px;           /* cantos levemente arredondados */
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);  /* sombra suave para destaque */
 }
-
+ 
 .imagem-lado {
   flex: 1 1 400px;
   text-align: center;
 }
-
+ 
 .imagem-lado img {
   width: 100%;
   max-width: 500px;     /* aumentei pra permitir imagem maior */
@@ -271,27 +268,27 @@ margin-bottom: 0%;
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
-
+ 
 .imagem-lado img:hover {
   transform: scale(1.02);
 }
-
+ 
 .texto-lado {
   flex: 2 1 400px;
 }
-
+ 
 .texto-lado .titulo {
   font-size: 2.4rem;
   margin-bottom: 16px;
   color: #333333;
 }
-
+ 
 .texto-lado p {
   font-size: 1.05rem;
   line-height: 1.6;
   color: #555555;
 }
-
+ 
 @media (max-width: 768px) {
   .container-lore {
     flex-direction: column;
@@ -311,7 +308,7 @@ margin-bottom: 0%;
   flex: 1 1 500px;          /* mínimo de 500px de largura antes de quebrar para coluna */
   text-align: center;
 }
-
+ 
 .imagem-lado img {
   width: 100%;              /* ocupar toda a largura disponível do bloco */
   max-width: 600px;         /* permitir até 600px de largura da imagem */
@@ -320,8 +317,131 @@ margin-bottom: 0%;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: transform 0.3s ease;
 }
-
+ 
 .imagem-lado img:hover {
   transform: scale(1.05);   /* leve zoom no hover */
 }
->>>>>>> bc5bcfe5137567aa79d82c86c55adfaf7f7e0da7
+ 
+    /* Footer */
+   footer {
+      background-color: #212529;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: auto;
+   }
+   /* Garante que o footer fique no fim da página sem sobrepor o conteúdo */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+ 
+/* O conteúdo principal ocupa o espaço restante da tela */
+main {
+  flex: 1;
+}
+ 
+/* Footer estilizado e fixado ao final do fluxo (não sobreposto) */
+footer {
+  background-color: #212529;
+  color: white;
+  text-align: center;
+ 
+  font-size: 16px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+ 
+  /* Remova qualquer posição fixa */
+  position: static; /* ou simplesmente tire position */
+}
+ 
+ body {
+      background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+       width: 100%;
+        width: 100%;               /* ocupa toda a largura da tela */
+  background-color: #212529; /* cor do footer */
+  color: white;
+  padding: 20px 0;
+  margin-top: auto;  
+    }
+ 
+    main {
+      flex: 1; /* empurra o footer para baixo */
+    }
+ 
+    /* Galeria */
+ 
+ 
+ 
+ 
+    /* Footer */
+    footer {
+      background-color: #212529;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: auto;
+    }
+ 
+.gallery-row {
+  display: flex;
+  flex-wrap: nowrap;      /* todas as imagens em uma linha */
+  gap: 15px;
+  overflow-x: auto;       /* barra de rolagem horizontal se necessário */
+  padding-bottom: 10px;
+}
+ 
+.gallery-row::-webkit-scrollbar {
+  height: 8px;
+}
+ 
+.gallery-row::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 4px;
+}
+ 
+.gallery-img {
+  flex: 0 0 auto;         /* impede que a imagem encolha */
+  width: 200px;           /* ajuste conforme desejar */
+ 
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+ 
+.gallery-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+ 
+/* Modal */
+.modal-img {
+  width: 100%;
+  border-radius: 8px;
+}
+footer{
+  margin: 90px;
+}
+footer {
+  background-color: #212529;
+  color: white;
+  text-align: center;
+ 
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* altura mínima = altura da tela */
+  margin: 0;
+  width: 100%;
+}
+ 
+main {
+  flex: 1; /* ocupa o espaço disponível */
+}
+ 
