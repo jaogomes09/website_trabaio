@@ -163,14 +163,11 @@ p {
   transition: background-color 0.3s;
 }
 
-/* Header estilizado */
+/* Header estilizado com fundo e reflexo */
 .slime-header {
   display: block;
-  /* garante que o elemento ocupe toda a largura disponível */
-  margin: 2rem auto;
-  /* centraliza horizontalmente */
+  margin: 3rem auto;
   text-align: center;
-  /* centraliza o texto dentro do h1 */
 
   font-size: 3rem;
   font-weight: 900;
@@ -183,95 +180,160 @@ p {
   -webkit-text-fill-color: transparent;
 
   /* Sombra 3D leve */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 4px 4px 10px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 
-  /* Flutuação */
-  display: inline-block;
-  margin: 2rem auto;
-  padding: 1rem 2rem;
-  animation: float 3s ease-in-out infinite alternate, gradientShift 5s ease infinite;
+  /* Fundo arredondado translúcido */
+  padding: 1rem 3rem;
+  border-radius: 25px;
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+
+  background-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(255, 100, 200, 0.25);
+
+  /* Animações */
+  animation: float 3s ease-in-out infinite alternate, gradientShift 6s ease infinite;
 }
 
-/* Animação de gradiente */
+/* Brilho difuso atrás */
+.slime-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 25px;
+  background: linear-gradient(135deg, rgba(255, 180, 255, 0.2), rgba(255, 100, 180, 0.1));
+  filter: blur(12px);
+  z-index: -1;
+}
+
+/* Reflexo animado */
+.slime-header::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+
+  /* Cria o reflexo espelhado */
+  transform: scaleY(-1);
+  opacity: 0.3;
+
+  /* Gradiente para sumir aos poucos */
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.1), transparent 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Efeito de brilho oscilante */
+  animation: reflectionGlow 4s ease-in-out infinite;
+}
+
+/* Animações */
 @keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-/* Animação de flutuação */
 @keyframes float {
-  0% {
-    transform: translateY(0px) rotateX(0deg);
-  }
-
-  50% {
-    transform: translateY(-10px) rotateX(2deg);
-  }
-
-  100% {
-    transform: translateY(0px) rotateX(0deg);
-  }
+  0% { transform: translateY(0px) rotateX(0deg); }
+  50% { transform: translateY(-10px) rotateX(2deg); }
+  100% { transform: translateY(0px) rotateX(0deg); }
 }
 
- .custom-navbar {
-    background: linear-gradient(135deg, #0a1f44, #142f57, #1f4068);
-    box-shadow: 0 4px 15px rgba(0, 0, 40, 0.5);
-    border-bottom: 2px solid rgba(100, 200, 255, 0.2);
-  }
+/* Brilho animado no reflexo */
+@keyframes reflectionGlow {
+  0%, 100% { opacity: 0.2; filter: blur(2px); }
+  50% { opacity: 0.35; filter: blur(1px); }
+}
 
-  /* Marca (título) */
-  .navbar-brand {
-    font-size: 1.4rem;
-    letter-spacing: 1px;
-    text-shadow: 0 0 10px rgba(0, 200, 255, 0.6);
-    transition: transform 0.3s ease, text-shadow 0.3s ease;
-  }
 
-  .navbar-brand:hover {
-    transform: scale(1.05);
-    text-shadow: 0 0 15px rgba(0, 255, 255, 0.9);
-  }
+ /* Navbar com gradiente e brilho */
+.custom-navbar {
+  background: linear-gradient(135deg, #0a1f44, #142f57, #1f4068);
+  box-shadow: 0 4px 15px rgba(0, 0, 40, 0.5);
+  border-bottom: 2px solid rgba(100, 200, 255, 0.2);
+  z-index: 1000; /* Garante que fique acima dos outros elementos */
+}
 
-  /* Links da direita */
-  .nav-link {
-    margin-left: 20px;
-    font-size: 1.1rem;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-  }
+/* Título */
+.navbar-brand {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(0, 200, 255, 0.6);
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
 
-  .nav-link:hover {
-    color: #66d9ff !important;
-    text-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
-  }
+.navbar-brand:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.9);
+}
 
-  /* Ícone do menu (modo mobile) */
-  .navbar-toggler {
-    background-color: rgba(255, 255, 255, 0.2);
-    border: none;
-  }
+/* Links da direita */
+.nav-link {
+  margin-left: 20px;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
 
-  .navbar-toggler-icon {
-    filter: invert(1);
-  }
+.nav-link:hover {
+  color: #66d9ff !important;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+}
 
-  /* Contêiner geral dos cards */
+/* Ícone do menu (modo mobile) */
+.navbar-toggler {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+
+/* Contêiner geral dos cards */
+.slime-section {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(200, 255, 200, 0.08));
+  border-radius: 25px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  padding: 3rem 2rem;
+  margin: 3rem auto;
+  max-width: 1500px;
+
+  /* Borda decorativa */
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efeito de brilho suave no fundo */
+.slime-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.15), transparent 60%),
+              radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.1), transparent 60%);
+  z-index: 0;
+  filter: blur(15px);
+}
+
+/* Contêiner de cards */
 .slime-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centraliza horizontalmente */
-  gap: 2rem; /* Espaçamento entre os cards */
-  padding: 2rem;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
   max-width: 1300px;
-  margin: 0 auto; /* Centraliza a grade */
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 /* Responsividade */
